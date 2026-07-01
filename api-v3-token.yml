@@ -1,0 +1,33 @@
+info:
+  name: api/v3/token
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{POS_BASE_URL}}/api/v3/token"
+  body:
+    type: json
+    data: |-
+      {
+        "client_id": "endmin",
+        "client_secret": "123456"
+      }
+  auth: inherit
+
+runtime:
+  actions:
+    - type: set-variable
+      phase: after-response
+      selector:
+        expression: res.body.access_token
+        method: jsonq
+      variable:
+        name: POS_ACCESS_TOKEN
+        scope: runtime
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
