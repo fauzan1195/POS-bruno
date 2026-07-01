@@ -4,14 +4,17 @@ info:
   seq: 1
 
 http:
-  method: GET
+  method: POST
   url: "{{POS_BASE_URL}}/api/v3/token"
+  headers:
+    - name: debug
+      value: "1"
   body:
     type: json
     data: |-
       {
-        "client_id": "endmin",
-        "client_secret": "123456"
+        "client_id": "{{POS_USERNAME}}",
+        "client_secret": "{{POS_PASSWORD}}"
       }
   auth: inherit
 
