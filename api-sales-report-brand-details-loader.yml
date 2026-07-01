@@ -4,8 +4,8 @@ info:
   seq: 2
 
 http:
-  method: POST
-  url: "{{POS_BASE_URL}}/api/sales-report/brand/details"
+  method: GET
+  url: "{{POS_BASE_URL}}/api/sales-report/brand/details/loader"
   body:
     type: json
     data: |-
