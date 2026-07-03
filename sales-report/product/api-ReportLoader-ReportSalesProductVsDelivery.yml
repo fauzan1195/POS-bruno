@@ -1,0 +1,18 @@
+info:
+  name: api/ReportLoader/ReportSalesProductVsDelivery
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{POS_BASE_URL}}/api/ReportLoader/ReportSalesProductVsDelivery"
+  body:
+    type: json
+    data: "{}"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

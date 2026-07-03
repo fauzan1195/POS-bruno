@@ -3,8 +3,8 @@ variables:
   - name: POS_BASE_URL
     value: https://localhost:5001
   - name: POS_USERNAME
-    value: endmin
+    value: dealpos
   - name: POS_PASSWORD
-    value: "123456"
+    value: inspiron
   - secret: true
     name: POS_ACCESS_TOKEN

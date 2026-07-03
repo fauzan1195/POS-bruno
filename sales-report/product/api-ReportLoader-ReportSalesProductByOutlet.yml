@@ -1,0 +1,21 @@
+info:
+  name: api/ReportLoader/ReportSalesProductByOutlet
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{POS_BASE_URL}}/api/ReportLoader/ReportSalesProductByOutlet"
+  body:
+    type: json
+    data: |-
+      {
+        
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

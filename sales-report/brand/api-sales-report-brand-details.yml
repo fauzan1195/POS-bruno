@@ -1,11 +1,11 @@
 info:
-  name: api/sales-report/brand/details/export
+  name: api/sales-report/brand/details
   type: http
-  seq: 2
+  seq: 1
 
 http:
   method: POST
-  url: "{{POS_BASE_URL}}/api/sales-report/brand/details/export"
+  url: "{{POS_BASE_URL}}/api/sales-report/brand/details"
   body:
     type: json
     data: |-
@@ -25,9 +25,7 @@ http:
         "ExportPageNumber": 1,
         "ExportRowCount": 10000
       }
-  auth:
-    type: bearer
-    token: "{{POS_ACCESS_TOKEN}}"
+  auth: inherit
 
 settings:
   encodeUrl: true
