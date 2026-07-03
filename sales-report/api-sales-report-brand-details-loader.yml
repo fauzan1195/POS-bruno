@@ -1,11 +1,11 @@
 info:
-  name: api/sales-report/brand/details/export
+  name: api/sales-report/brand/details/loader
   type: http
-  seq: 4
+  seq: 1
 
 http:
-  method: POST
-  url: "{{POS_BASE_URL}}/api/sales-report/brand/details/export"
+  method: GET
+  url: "{{POS_BASE_URL}}/api/sales-report/brand/details/loader"
   body:
     type: json
     data: |-

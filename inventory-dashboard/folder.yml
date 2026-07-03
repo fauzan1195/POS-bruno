@@ -1,0 +1,7 @@
+info:
+  name: inventory-dashboard
+  type: folder
+  seq: 3
+
+request:
+  auth: inherit
