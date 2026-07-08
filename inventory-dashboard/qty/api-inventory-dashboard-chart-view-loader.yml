@@ -1,0 +1,15 @@
+info:
+  name: api/inventory/dashboard/chart-view/loader
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{POS_BASE_URL}}/api/inventory/dashboard/chart-view/loader"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

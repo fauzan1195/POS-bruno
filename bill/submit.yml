@@ -1,0 +1,298 @@
+info:
+  name: submit
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{POS_BASE_URL}}/API/Buy/SubmitOrder2"
+  headers:
+    - name: accept
+      value: application/json, text/plain, */*
+    - name: accept-language
+      value: en-GB,en-US;q=0.9,en;q=0.8
+    - name: authorization
+      value: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJMSUQiOiJlbmRtaW4iLCJVSUQiOiI3MjZmNzliYy0wNTA4LTRiZGMtYWZlNS04OTEwNTNkNTdlOTkiLCJUeXBlIjoiTm9ybWFsIiwiQnJhbmQiOiJmYXV6YW4iLCJPdXRsZXQiOiIzYmJjMmU5YmUzNTA0MDdjYWM3NjAwNjY3ZWFjMzA0YiMzOzIxMmMyYzhiYjJiMzRmMTBhZGVjMDI0NWNjYmVlMDNhIzM7NWRmY2ZiZGQ5ZjhjNGE5ODg3NzAwM2IzYjkzZTc0NTEjMzthMzk4ZTU1MDExMmQ0YTk4OGUyZjAzZGQyNzljYWIwYyMzOzQzYTNjM2VmY2VkNzQzYjFiMWQ5MDU2Njg4Y2RhODQ0IzM7ZjQ4OTM3M2Q1ZDQ4NGZjZWI1OWQwNTZlZWQxYjRiNTAjMzs5NDg5NjI3NGY2ZGI0YWFkODRlZDA2NGVlZWI1NWFmMCMzOzA4NjY1YjJiNTYxNzQwODM5NjIzMDkwZTE4M2I0NjllIzM7NWZjMzcxMmYzMmZlNGJhYThmNWMwYWI4M2M0NDkzOWUjMzswMTlhOTUxNjBmYmE3NGE4OTBkYTBiYTg2NTY5YjNjNCMzO2Q2ZGNmYjg0ZTFhYTRkYzM5YjVkMGQxNmEwMzljZmJlIzM7MGNjZTc3YjgyMmU2NGFlMjk3NmMwZWE4YjE2NDY4MzMjMzs5NTA4YjE0NDlhYzI0Y2ViODY0ZjExMTk4YjJjNjhjZCMzOzM5MjIxOWYzYWIzZjQ1NmQ5YjNkMTE2NGM4OGVkNTY2IzM7OWFkMWQ2ZmMyOGFlNGZmMzlmNjQxNDQyYjc2ZDUxMTgjMzsxMWNmN2I2ZGRiOGQ0YjgwYjM0NTE0YzBiNDQ3Y2NiMiMzOzE5ZWE2ZWFlYzA0NzQ5MTZiYjc1MTdhNzE2MmY3M2RmIzM7ZjQ3YTY2YjY1MmEyNGMwMTlmZjIxOTI1ZWMzNWM0MDYjMztkNjlkYzRkMzI3ZmE0NTA5ODNiYTFiNDBlZDQ3Mzg1OCMzOzk5ZWU5NjJhMTkyMTRmZGU5NzExMWRhOTU2OGJlNjA1IzM7NmI3ODBlZmQ1ZTlhNDk4NGJiN2YxZTY1ZmM3N2Q3NGQjMztmMDQ1MTg3NDU1Y2Y0NmI4YThiZDIwYTVkMWFlNDRkYSMzOzAxOTkwZTc3Njk3YjcyMTRhZmUxMjJjMzU3MzM1YWI4IzM7M2E5ZDFhZDY4ZmUwNDkyMWJiYzUyMmZhMjY2OGI0ZTMjMzsyMDJiMjFlYjI1ZWY0Njg3YjAzYzI2MWQwNDUxNzRhNSMzOzA5NjdkZWIyN2E4MjQ4MTY4OWJhMmE5NGVhZDQxOGZhIzM7YzhlZGI3Mzc3MTgzNGE3YWEyYWEyYjhkMjdmZTVmMTQjMztiNGEyNGU2ODdmNzU0M2NjYWNkNDJkMTcwNWM0OWMyNyMzOzJiOGYxODZlYmExNDQ2OTliNjVjMmYwYTUxZDI5MTgwIzM7YjYyYzY0NmQ0ZTQ2NGNmMDlkYjczNjMyM2ZjODQ5ZmEjMzsxMWQxOTcyNDQxMDM0MmI2YmZhZDM3NmVjMGM5MmUwYyMzO2U5NDNmOTY1Nzc0ZDQ5YTZiMGRkMzdkMmFiZTcxMjRiIzM7Zjc4ZjRkNjY3MmRkNGFkMjgyMzczODQ0ZjZkZDhhNmMjMzsyZWJhODM0MDk1ODM0Zjg4YjM0YjM5NWEzM2M2ZDk2ZiMzOzAxOTg3OGZiZDdjNTczMzc4OTJjM2YzM2FmMmQ3OGM2IzM7ZTJlYWRmYzA5MDY3NDlkMWE1YjM0MDM2MjRjOTBiNDQjMzs3NjAwYjlkOTUyMGM0YmE1OTc3YjQwNWIxNzYyYjdhYyMzOzY1NGFhZmExMzI2YzQ2ODVhYTExNDMyMzU0ZDE1ZWEzIzM7N2ZkMzViZDYzZWJkNGY0ZWE3YTE0NGE5Njg0Zjc2ZTMjMzswMTk4ZWE1Y2MyMTA3YmE5YTcxYTQ1NDdiOTlkMWNkZSMzO2YwMjc5YmU3NWE0ZDRkZWNhOTdkNDdiMjU2MDMxNTU2IzM7YzRhZmFjYjllMzRiNDk2NDhmOGM0YWQzZjY4ODM1NDgjMzswMTk4Nzg1ZDk4MTY3ODgzODU0OTRhZGFhMTQ0ZDI3YiMzOzdkNzk5NDJkOGYyNjQzMTBhYTVkNGJmNDZmYzNhODQ1IzM7NTVjNjhjYThhMTc4NGViYmJiNDE0YzUwNTIxYTNjMTEjMzswMTliMzQ5ZGY4ZWY3ODM3YjgwYzRlNzNhYTQ2ZGNkNSMzO2VlNmEwOTQ4MGJmZTQzMWRhYWYxNTBhMmZjNTQyYmM1IzM7MzU0YTBlZDVkODY3NGNhOWFhZWQ1MTlhNmU2OWE0OWIjMzswMTllZmNhYWFlZjM3MGY2OTIyNDUyNGE0NGIxMWMyNSMzOzAxOWFlNzQ3ZDA1NzdmNTk4ZGEzNTMxZWVkNzA5MTU4IzM7NDg2OTEwMTg1OWU5NGExYWFhNmU1NGM5MTM4NGIwZWIjMzs0Yzk4ZDBjOTc2MWI0NzBiOWVhODU1YzY1ZTMwYmIyZCMzOzYyYzNiN2E5ZDQxYzQ2MTU4ZjQzNTcyZDhmZTQ3NzhiIzM7NWI5ZWFmNWZmZWIxNDY1YmI5N2I1N2YwZjVkMzg4YTUjMztlMmI2NmNmOGZkZjQ0N2I3YjNiNjVhNmZiNDcwMjliMyMzO2QyOWYyMTI5MDhkMjQyZmRhZmE3NWE4ZTVmMDA0MjYzIzM7NGJhZGIwNjAyMjg0NGY0MDk1MzA1YWRhNzc1M2Y2ZmQjMzs2NDE3ODlmZGI2ODc0ZWU3ODE5MzVjNzlkMjQzNDhhMyMzOzM2OTMyMzk0NTJlODQ4YjliNzUyNWNhYzc3NDM3NGVhIzM7YjdiYWViYjA3NmNiNDY3NjlmN2U1ZDAxOWIwODI2M2EjMztkOGM0OTU2NDJjMDA0Zjc3OTQ4YTVlNTdmNmQ1OWU0OSMzOzAxOWI1OTVmNzM0Zjc3MTY5NGFkNWYwNTJhMjhkN2FjIzM7OGYyNGQ5M2ZmMGM0NDg2NWEzZTg1ZjEzNTRjNjk5MzkjMztiZjdmZTk1OTUxZGM0MTc5OTg4NDVmZDI4ZjkxODQ0MiMzO2RmYmViZjdlMDU2ZjRmNzg4ODFlNjA4MmU1Mzc1MzY3IzM7ZGFhNTJiN2RhNTQ3NDA0OGJhMWY2MzEyNGU3MGU0YzIjMztlNzY0NTFlMzQxMzk0MWYwYTNjYzY0MzJjMzNkNDRjYSMzO2IzZTdlMTIxMWQ2YTQwMzM4MzVjNjRhMzBiYTc3MTcwIzM7MDE5ODc4NjAzZWYyN2Y4MzljNmY2N2JjZWFiYmZjY2YjMztmMDUzZDhiNGZjNmM0YTBjYmM2NDZhZTQzNDk4ODhhZSMzOzI3NzFkNzExZWZkYTRhMTNiODAzNmI3MGQ4MmZhNGM2IzM7MDAyZDE0ZDc4ZjkyNGU0OGE0OTk2Yjc0ZjNiMzc2YmMjMzszOWUxOThmODY5ZDE0Y2Y5OWFjODZlODQ3ZjE2ZjliOCMzOzUxMGIxYjk0NDJlMTRiNzY4ZDY4NmY5MzNhZTNjNzFkIzM7ZmVmMjE2MTFhY2I2NDJiZThkZTI2ZmQyMzBmNzFlOWEjMzs4N2VkZWQwOTRkMGQ0ZDcxYmExZDcwNzUzMTA4ZjA3ZCMzOzAxOTg4ZWFjZmY2Yjc3M2ZhZDUyNzExMzY3YzM1MzczIzM7NTkxZWRhODdlNDUyNDFlNjlmZTk3MjVjZjM4NjQ3NGEjMzs2YTJkZTU2NzVlNmE0ZWJhYWQyNjcyNzI4YzY3ZmZmYSMzO2YzMWY3YWQwM2IzNzQ1NDI5ZjU3NzQyMGNmNTkwOTY3IzM7NjkyYjNlYjU2ZDMzNGYzMWEwYzI3NmUzZDAwYjRjMDIjMzswMTk4NzhmZjhiMzQ3NTg2YmNiODc5MmU4MGQ5NWU4NCMzOzFkOWJkOTYwM2NhMDQ2NDJiMzQ3N2E4OWM0ODNmODQ5IzM7NjY1NDI5Yjk0NTBmNDk1M2I2OTM3YmJlYTI1YmQyYWEjMzswMTk4ZWE2MDBhNGE3ZjY1OWY2YTdjMDA2MzcyMzdjZCMzO2VkMDBiYTRkMjkwNTQ1YjZhNGRhN2MwMTE1NjJjMGM3IzM7NTYwYTlkYjg5Y2RlNDQ5OGI2MTI3ZDQ5YzI4OTNlNzgjMzswMTlhZmMwZGYwODE3MzM2ODVjYTgwNWJlYTA3MDhhZSMzOzJkN2IxNTEyMGEwNjRkNmE5YjEyODI4YjNkMTBjZTE2IzM7N2U5ZDNkNjQ2Nzg4NDQ4MDhjNTA4NDI0YTBiZGUwNmQjMzsyZGVmNmY4OGFmNGU0NGYyOTg3ZDg1ZGM4OWQ2NDIyZSMzOzY4OTkwMGYxYzZkYjQyMTY5YWUzODYwMTZjZmUxNmQwIzM7ZGRjZmQ2MDYyNGI2NDhiYzlmZjA4OTNjZGUyNWM5YTYjMzswMTliNGFhZDExMjM3ZmMyYTEwODg5ZTRiZTI2ZDFmNyMzOzFhYzdhNTFmMmZjNjQ3MjE4NWVkOGIwNzFlMGFjZmMyIzM7MTNiMjlkZGJjMjYzNDIzMWI2ZmM4YzFiZjMyNTUxZGIjMzs1ZTM2NzJkZDY1YjU0NjQwOWFkYzhkZWY1ODFjNDE3ZiMzOzAxOTkwZTc3ZjZmMjdmZjU4MGNhOGU1NDEyNjYxYjFiIzM7ZGE4NmViMWU5OTQ1NGQ3YzhkMDQ5NDNjMmQyN2U1NDEjMzs5YWU3NDNhMDA0YjE0NDM5OGRjMDk3OGFjMTA1NWZlNiMzOzQ1MTI2Yzg2NGIwYjQ5OTNiZTYyOTgzYmMzMTI1MjUzIzM7YTFjODE3ZDE4YmVkNDNiMjgyZDc5OTVhNDk0M2I5ZjcjMzs3NjAwYjRkMTRjZmU0OWNhYWMzNzk5OTliNGMyMTA3ZSMzOzRjZDYyNTk4Y2RhMTQxYTk4MTg1OWNhMzdkOTg0ZDI3IzM7ZGRhNWJlY2IxNmNiNDVlMGEzZGQ5ZDQ1NDFiNzQ3MGQjMzthYjkxZjdhZThmYjk0ODczOWQxMmE0M2I3MTJmZmY5OSMzO2I3OTVhNjJjNTJjODQ4Mzg4MTQ1YTQ0M2ZkMWVjYWY1IzM7ZGNlY2JiMmNiOTA3NGNmOGIwMjBhNDQ4YWY0YTc1YWQjMzsyMDIyOWIyMzA4NzE0ZmQzODA5NmE4NjYwMGM5YzI1ZCMzO2JkZDMxNTgzYzVjYTQ1NjY4MTZjYTkxMDc1YTU4YzQ3IzM7MzNkODVjZmVlYjE4NDU2OTk4Y2NhOTZiMmMzMmI3YWEjMzszOTFjZGIyNmEwYWI0NDUzYjFjZmE5YjE2NzliNGQ3NCMzOzAxOWE0OGEwN2QzODczNjdhNGRlYWJlNGU2NmY3OGQxIzM7MmZjNjkwYzA2YjU3NDkzYzg3NWFhYmY1N2JkZGZjNjkjMzsxNjg1NjQxMWM3MTI0OWZmOWVjYmFlNzhiOTdhNTZhZiMzO2E2NDlmNTA2N2M0NjQ3ZWFiZjY1YWZiOTIxOTA2MzJiIzM7MjIzZDgyYzM4YmFhNDIzYzk3NTNiM2MwYWNhODU4OTgjMzswMTk4NzgzMTAxN2U3ZWNiOTZlNGIzZGU5MGI0MjNhMiMzO2M1YTBiMjlmZDg5NTQ2MjE5ZWJhYjYyZjU4NTAwYTdiIzM7ZGY0YzgwM2JhYjhmNDk1NGFjMmViNjkzNzQ4NWVlNDUjMzs4N2YxY2JjMzgxMTQ0NWE0YjExMWI4N2E1MTY1Y2M0ZCMzOzVhYjBjYWM0Yzk3ZDQ2MGFhZmQ3YmJhYzc0Mjg3ODRiIzM7NjZmMjIzZTFmNGUxNDEwNmI1ZmViYzJiYzg1MDIwNGUjMztlMTYzMmEzNmI0NTQ0ZTc5OTEzYWJlNWJjNzRhNzdiNiMzO2VkMjNkZGQ2OWM0NDQ0OTFiZDY3YmZjN2FiNDI1MjU5IzM7MWM3OTNhYzljYmQwNDQ0MjkyYjBjMDQwMmRjZmViYzAjMzs0NmU5ZjViZDhkYmI0MTE0YWJlNWMxMDNjMzNlNmUyYiMzO2ViYjkwMjQ1MDA1MzRiNDY5YmYzYzIwNjY5NzAwOTFlIzM7ZWU2YmU0NmRkMDE4NGZmMGJhMDBjNGZlY2VlYmUyMjUjMzswMTk4Nzg0YzUwYWM3YWQxODgyNWM1YmZkZWE0ZjQ5ZSMzOzI3N2ExY2Y5ZjNhZjRlMjZiNzBhY2JjZjY5OTIzZmNlIzM7NDc1MjE1OWNiNmY5NDhjYjlmZGVjZTkxOTliMmFkYzAjMzs5OTc0M2Q0YzdmOGM0MzgyYjIzZWNmZDUxMTM1ZjFhNCMzOzU2NmJkM2EwYWY1OTQzZTNhMGQ0ZDE3MjVjYjYzYTQ5IzM7MDE5ODc4NzRhMWIzNzE2N2FkYjFkMWFmODU3MzliYzAjMzsyYmVmZjI4ZGI4NmI0NTc4YjZlN2QyNTNmNzgyYjk3YiMzOzliMzdhMTExZGRmMzQwZjVhYzkwZDI2NDY2NGJhODBiIzM7YWVlYTJhMjEwMGQ3NDhhMmE1ZjJkM2JhZmNlZGI2YjMjMzthZGI1MWI3NzFlNzM0NTM5ODk5Y2Q1NWVlZjgyZDBiZCMzOzg0ZmI0ZmI3MzVmODQ0MDA5OTJhZDZhMzAxNjQ4Mjg5IzM7MDE5YTkwODliMzg0NzkzMzgwMDNkOGE4ODQ5YmYwOGYjMztlOWQyZGJjYzJjM2M0ZjkzYjAyYWRhZWUwNmQ0ZDkxZSMzOzAxOTg4ZTliM2MyMTdiZTU4ZDEyZGNiZGQzNWUxMjFjIzM7YWJkZDg1MTVmYWQ3NDhkNmE0YWFkZGNlNDBmMjYyNmQjMztlMDhmMzQ1MTM2NTg0YjFkYmFjMmRlZTAzN2Y3ZjRjZiMzOzAxOWFlZGJjYjVjMzdlZmQ4YjdlZGVmMzhmNDdmYTNhIzM7ZDliMDYzMjU5ZDg2NGNhNWIyYTVlMGJiZGM3MmEwYTYjMzs3ZTQ2MTAzOTUyMzA0ZDFkYjI3OGUxMTJiOTVjZTkyYiMzOzcwZGUyY2ZiMDI5NTQzN2RhZGRkZTM3OGM1ZjNmZDMyIzM7OTA4ZjBhNjlkOTZhNGNhYWJmZjhlNGI5MzdhNDY4ZDYjMztmY2FhN2YxYmEzMzQ0NDYwODIxM2U5OTlmMzg0ZTMwOSMzOzBkOGI5NWQxZmZhYzQ1YjJiMmNkZWEzZGZiY2QwZDFhIzM7MDE5ODVlMGJjMjhkNzFiOWIyNWNlYTk1NDU5NWU1YjYjMzswYzY0NjZmMWVhYTA0Zjc3YTIzY2VjNmMyMjJiNDFiMyMzOzcxNjgyMWQwZmI3YjQxMjViYTk4ZWM3OGQzNDI0MDU1IzM7YWQ5YzkwYjNmMjM2NDgxY2EwYzJmMDllNWI1NDIzMjEjMzswMTk4NzhmYjcyNjY3NjY0OGIwZWYxYTk4MGQ4NmI0MyMzOzAxOWE2YmJlNmRkNzc4YThhOTgyZjFjYzY5YjM1NjFjIzM7MDE5OGVhNjBkNzI3NzUzMWJkZWZmMjI2NDNlZTI1MmYjMztjMzVjOGNjZTExZmU0MmZiOTY3NmYzMmQyZDFhZDczYyMzOzAxOWE5MDk2ZjM0ZjczYWFhNjcxZjU4ODI3MmRlNzFhIzM7MDE5ODc5M2U1MmZlN2JjZDg4OWJmOTc1MTAzYzY0NzYjMzswMTk4ZWE1ZTZhZjQ3M2ZkYTQwOGY5OTc3ODRkODk1ZCMzO2QwZTU1NzEwNTlkZTQ1NDQ5MTAyZmEwYjZjNDQxYmFhIzM7MDE5OTc1ZDYwNjhkNzUyZWJjMGVmYjEzMDRkOGM4MDgjMzswZThiYWFiOTE4YjU0YTNhYWExMmZiN2MyNzczMjA5ZSMzOzM4ZjIyYjExZWI1YTRmZTU4Y2JhZmRmYmQxM2NjMTczIzM7YTYzYzc2M2Q3ZWY2NGMyMDkyYTNmZWU4MGYwYTk3ODUjMzswMTk4M2Y1YjQ0YmE3MDM0YTBkM2ZmNjhhMzE2ZGQxOCMzOzAxOWEyOTIzMjhkYTdjZTQ4MDM1ZmY4Nzc1ZjdjZjkzIzMiLCJFbWFpbCI6ImZhdXphbi5wYWhsYXdhbkBnbWFpbC5jb20iLCJkYXRhRGF5c1JhbmdlIjoxMDAwLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOlsiRXN0RSIsIlNlbGwiLCJBUEkiLCJFeHBvcnQiLCJDb24iLCJNYW4iLCJEZXZlbG9wZXJUb29scyIsIlNlbGxFIiwiU2hpZnQyIiwiRGFzaFYiLCJPcmQiLCJNcnAiLCJVc2UiLCJEYXNoYm9hcmQyIiwiUGF5IiwiUHJvZCIsIlNoaWZ0IiwiRGVidDIiLCJEZWJ0IiwiUHJvbSIsIlRyZSIsIk9yZGVyc0JpblZpZXciLCJQcm9mIiwiU3RwIiwiVW5pdFBFIiwiVXNlcjIiLCJPdXQiLCJJbnYiLCJSZXAiLCJBZGoiLCJEZWJ0QyIsIlNoaWZ0QyIsIk1hbkMiLCJTdWJzIiwiQWRqRSIsIlBheUUiLCJFc3RDIiwiSW52RSIsIkNvbkMiLCJPdXRDIiwiU2VsbEQiLCJSZXBBIiwiSnVybmFsIiwiVHJlQyIsIk9yZEIiLCJEZXZFIiwiU3RwQyIsIkRlbCIsIlVzZUMiLCJOb3RmIiwiT3JkVm8iLCJQcm9tQyIsIlByb2RDIiwiRXN0RCIsIk51bUUiLCJQcm9kRSIsIkRlbEl0bSIsIk1hbkUiLCJDb25FIiwiRGVidEUiLCJBZGpDIiwiUmVzdFZPIiwiUmVwRiIsIlN0cEUiLCJVc2VFIiwiRGVsRSIsIkJ1eSIsIk91dEUiLCJUb29scyIsIlRyZUUiLCJTaGlmdEUiLCJQcm9tRSIsIkJ1eUQiLCJEZWJ0RCIsIkRlbEEiLCJTdHBEIiwiVHJlRCIsIlByaWNlTSIsIlBheUQiLCJBY3R2IiwiUHJvbUQiLCJJbnZQQyIsIlByb2REIiwiUGF5UiIsIlNhbGVzbWFuRSIsIkRpc3AiLCJBZGpEIiwiRGVsRCIsIlNoaWZ0RCIsIlVzZUQiLCJSZXBQIiwiRXJhc2VWTyIsIk91dEQiLCJDb25EIiwiTWFuRCIsIkVtYWlsIiwiRGVsUkUiLCJGdWxGIiwiVHJlSSIsIkNvc3QiLCJPcmRScHIiLCJMb3lQRSIsIkRpc2MiLCJHcm8iLCJSZXBQcm8iLCJCdXlFIiwiS2l0RCIsIldoQ29uZiIsIkRldiIsIlBheUMiLCJJbWdFIiwiRGF0ZUUiLCJDb3UiLCJCdXlSIiwiVGF4IiwiU2hhclBhY0UiLCJEZWxDIiwiQ29udEUiLCJQcmljZVYiLCJQcmkiLCJUcmVOIiwiU2hpcCIsIlJldHVybiIsIkRlbERFIiwiUmV0cmlldmVSIiwiQm9va3MiLCJFeHBlbnNlIiwiRGVsUiIsIlNhbFAiLCJQcmljZWJTIiwiRG9jdCIsIkFkakFwcCIsIlF1YW50aXR5IiwiUHVyQSIsIkJ1eURFIiwiSW52QWR2IiwiT3JkTmUiLCJEZWxTIiwiRGVsViIsIlJlcG9ydDIiLCJ0ZXMiLCJQYXlERSIsIkZ1bCIsIkZ1bEUiLCJGdWxDIiwiRnVsRCIsIm5ldHMiLCJPcmRJciIsIkNvbW1WIiwiUmVzdG9yZVZvaWRPcmRCIiwiRGVsZXRlQWxsT3V0bGV0UHJpY2UiLCJQYXJrIiwiU3VwcCIsIlNoaWZ0Vm8iLCJHbG9iYWxTRiIsIkZ1bFMiXSwiQnJuZCI6IjAxOTg2MzU1LTE2NTQtN2YwMy1iYjQ1LTU1ODc5MGFhOTgwMCIsImV4cCI6MTc4MzM5MjcxNCwiaXNzIjoiZmF1emFuLmRlYWxwb3MubmV0IiwiYXVkIjoiZmF1emFuLmRlYWxwb3MubmV0In0.pmykEmq1wIMxkB7tyIi4_YMFPmVFuZWFXJ3DCD__fPE
+    - name: cache-control
+      value: no-cache
+    - name: content-type
+      value: application/json
+    - name: Cookie
+      value: intercom-device-id-xv1oomgl=3f99a18d-2ef1-4fba-911f-173d8db3c96b; intercom-session-xv1oomgl=ZGkvUnF6SFBWMTU4cHBQbDBWeEhVTU1ZTVY3R2dVRjZxTGZrMDVxVVFBazdqSXhZdU4rbjlUZGhEWTBXTG84M0FHVTRrMTQxQ0s3Y25UeHAwcTVHdU9McjZqU1FIcjlzQ0FwN2ZYdlNkQTZVcWtiY0hQN2VFMkJ3bGZkQU92RVJmQ3ZQUzNKd2RXMkFSUkxsc1kySG1mWUMrK09ZM2Y4cy9pN3M5TnJHM05VclpacjZTSGg4dXIvMXg4S2ZuWStEUk4zQUQ0UmdDWTF1U2kzamkzcEsyZz09LS1uZlVEVUZEZG1nejkreU5sTENnMDdnPT0=--3f0a998f1735161a7a885f104622e97d8b8b0c53
+    - name: debug
+      value: "1"
+    - name: origin
+      value: https://localhost:5001
+    - name: priority
+      value: u=1, i
+    - name: referer
+      value: https://localhost:5001/menu/Buy
+    - name: sec-ch-ua
+      value: '"Google Chrome";v="149", "Chromium";v="149", "Not)A;Brand";v="24"'
+    - name: sec-ch-ua-mobile
+      value: ?0
+    - name: sec-ch-ua-platform
+      value: '"Windows"'
+    - name: sec-fetch-dest
+      value: empty
+    - name: sec-fetch-mode
+      value: cors
+    - name: sec-fetch-site
+      value: same-origin
+    - name: user-agent
+      value: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+  body:
+    type: json
+    data: |-
+      {
+        "DeliveryEntityID": "8f24d93f-f0c4-4865-a3e8-5f1354c69939",
+        "NewOrderID": null,
+        "Invoice": {
+          "ID": "00000000-0000-0000-0000-000000000000",
+          "Tax": 16307.564081500002,
+          "Sales": 0,
+          "PaymentStateID": 5,
+          "Number": "26.07.07.00003",
+          "CustomDateField": null
+        },
+        "Order": {
+          "EntityID": "8f24d93f-f0c4-4865-a3e8-5f1354c69939",
+          "SupplierID": "",
+          "Date": "2026-07-07T00:00:00.000",
+          "CurrencyID": 1,
+          "CurrencyRate": 1,
+          "Discount": 15,
+          "DiscountAmount": 15000,
+          "Note": "",
+          "Att": "",
+          "TaxTypeID": "5e1b981e-b796-4730-8043-e4173f6a4f9f",
+          "TypeID": "674e904c-da1e-40e9-9377-5edb840e3083",
+          "Number": "26.07.07.00003",
+          "ID": "00000000-0000-0000-0000-000000000000"
+        },
+        "Items": [
+          {
+            "UnitsInStock": null,
+            "CategoryName": "Endfield",
+            "CategoryTypeID": 0,
+            "PriceTypeID": 0,
+            "PriceNote": null,
+            "UnitPriceOriginal": 150000,
+            "Ordered": null,
+            "BrandName": "Endfield",
+            "ImageUrl": "https://cdn.dealpos.app/net/fauzan/Variant/019cabf0-9808-7e9a-9e6d-8d8f6ecb3f46/Swordmancer_Heavy_Armor_T1.jpg",
+            "ThumbnailUrl": "https://dealpos.b-cdn.net/net/fauzan/Variant/019cabf0-9808-7e9a-9e6d-8d8f6ecb3f46/Swordmancer_Heavy_Armor_T1.jpg?width=160",
+            "Component": [],
+            "ManufacturedComponent": null,
+            "PriceBook": [],
+            "UOMName": null,
+            "Sub_UOMName": "Half Ea",
+            "Storage": null,
+            "CategoryID": "60bb711b-9054-4ff3-8cff-ace91ef5ff04",
+            "DiscountAmount": 0,
+            "VariantUnitQuantity": 1,
+            "ProductCreated": "2026-03-02T07:26:37.377",
+            "ProductID": "019cabef-c5e9-767c-a1fe-d314f005b424",
+            "ProductIndex": 0,
+            "Code": "DPS-000383",
+            "TypeID": 1,
+            "UnitQuantity": 1,
+            "SalesCommission": 0,
+            "Description": "",
+            "Image": "Swordmancer_Heavy_Armor_T1.jpg",
+            "ThumbnailImage": null,
+            "Discontinued": false,
+            "Taxable": true,
+            "LoyaltyPoint": true,
+            "CreatorId": "726f79bc-0508-4bdc-afe5-891053d57e99",
+            "Created": "2026-03-02T07:26:37.45",
+            "UnitExpense": 0,
+            "SellPriceType": 0,
+            "VariantType": "Standard",
+            "ModifierID": "00000000-0000-0000-0000-000000000000",
+            "Modified": "0001-01-01T00:00:00",
+            "CostCurrencyID": 1,
+            "UnitCost": 108630.5596,
+            "OrderPrice": 110000,
+            "OrderPriceDiscount": 5,
+            "OrderPriceDiscountDetail": null,
+            "PriceCurrencyID": 1,
+            "UnitPrice": 110000,
+            "PriceDiscount": 0,
+            "PaymentTypeID": 0,
+            "PaymentTypeString": "Cash And Point",
+            "SellPriceTypeString": "Require Authorization ",
+            "Weight": 0,
+            "CostCurrencySymbol": null,
+            "PriceCurrencySymbol": null,
+            "UnitPriceMinimum": 145000,
+            "MaxOrderPrice": 135000,
+            "VariantImageVisible": true,
+            "UOM": "00000000-0000-0000-0000-000000000000",
+            "MeasurementID": "00000000-0000-0000-0000-000000000000",
+            "UOMQ": "019d89f6-7fcf-75c0-90a5-2c4506549458",
+            "Name": "Swordmancer Heavy Armor",
+            "Model": "Default",
+            "ID": "019cabf0-9808-7e9a-9e6d-8d8f6ecb3f46",
+            "Quantity": 1,
+            "Total": 104500,
+            "Discount": 5,
+            "VariantID": "019cabf0-9808-7e9a-9e6d-8d8f6ecb3f46",
+            "InventoryTypeID": 1
+          },
+          {
+            "UnitsInStock": null,
+            "CategoryName": "Endfield",
+            "CategoryTypeID": 0,
+            "PriceTypeID": 0,
+            "PriceNote": null,
+            "UnitPriceOriginal": 1000,
+            "Ordered": null,
+            "BrandName": null,
+            "ImageUrl": null,
+            "ThumbnailUrl": null,
+            "Component": [],
+            "ManufacturedComponent": null,
+            "PriceBook": [],
+            "UOMName": null,
+            "Sub_UOMName": null,
+            "Storage": null,
+            "CategoryID": "60bb711b-9054-4ff3-8cff-ace91ef5ff04",
+            "DiscountAmount": 0,
+            "VariantUnitQuantity": 1,
+            "ProductCreated": "2026-03-02T08:15:25.13",
+            "ProductID": "019cac1c-e983-75f9-b88b-ed9ecbab0a91",
+            "ProductIndex": 0,
+            "Code": "DPS-000382",
+            "TypeID": 11,
+            "UnitQuantity": 1,
+            "SalesCommission": 0,
+            "Description": "",
+            "Image": "",
+            "ThumbnailImage": null,
+            "Discontinued": false,
+            "Taxable": true,
+            "LoyaltyPoint": true,
+            "CreatorId": "726f79bc-0508-4bdc-afe5-891053d57e99",
+            "Created": "2026-03-02T08:15:25.187",
+            "UnitExpense": 0,
+            "SellPriceType": 0,
+            "VariantType": "Non-Inventory",
+            "ModifierID": "00000000-0000-0000-0000-000000000000",
+            "Modified": "0001-01-01T00:00:00",
+            "CostCurrencyID": 1,
+            "UnitCost": 15000.7539,
+            "OrderPrice": 15000.7539,
+            "OrderPriceDiscount": 0,
+            "OrderPriceDiscountDetail": null,
+            "PriceCurrencyID": 1,
+            "UnitPrice": 15000.7539,
+            "PriceDiscount": 0,
+            "PaymentTypeID": 0,
+            "PaymentTypeString": "Cash And Point",
+            "SellPriceTypeString": "Require Authorization ",
+            "Weight": 0,
+            "CostCurrencySymbol": null,
+            "PriceCurrencySymbol": null,
+            "UnitPriceMinimum": 0,
+            "MaxOrderPrice": 0,
+            "VariantImageVisible": false,
+            "UOM": "00000000-0000-0000-0000-000000000000",
+            "MeasurementID": "00000000-0000-0000-0000-000000000000",
+            "UOMQ": "00000000-0000-0000-0000-000000000000",
+            "Name": "DeliverySuperFragile",
+            "Model": "Default",
+            "ID": "019cac1d-4482-71bb-b78b-92d5fde8d962",
+            "Quantity": 1,
+            "Total": 15000.7539,
+            "Discount": 0,
+            "VariantID": "019cac1d-4482-71bb-b78b-92d5fde8d962",
+            "InventoryTypeID": 11
+          },
+          {
+            "UnitsInStock": null,
+            "CategoryName": "Endfield",
+            "CategoryTypeID": 0,
+            "PriceTypeID": 0,
+            "PriceNote": null,
+            "UnitPriceOriginal": 777999,
+            "Ordered": null,
+            "BrandName": "Pokemon",
+            "ImageUrl": "https://cdn.dealpos.app/net/fauzan/Variant/01996fbc-61ff-7803-b8d3-51044830136c/019f3687ae9d7e16808ef2481a7a8046.jpg",
+            "ThumbnailUrl": "https://dealpos.b-cdn.net/net/fauzan/Variant/01996fbc-61ff-7803-b8d3-51044830136c/019f3687ae9d7e16808ef2481a7a8046.jpg?width=160",
+            "Component": [],
+            "ManufacturedComponent": null,
+            "PriceBook": [],
+            "UOMName": null,
+            "Sub_UOMName": null,
+            "Storage": null,
+            "CategoryID": "60bb711b-9054-4ff3-8cff-ace91ef5ff04",
+            "DiscountAmount": 0,
+            "VariantUnitQuantity": 1,
+            "ProductCreated": "2025-03-07T01:05:53.283",
+            "ProductID": "3fa5c751-cbb9-468b-b1c1-33e88a5faa46",
+            "ProductIndex": 0,
+            "Code": "DPS-012227",
+            "TypeID": 1,
+            "UnitQuantity": 1,
+            "SalesCommission": 3000,
+            "Description": "<div>New Arrival</div>",
+            "Image": "019f3687ae9d7e16808ef2481a7a8046.jpg",
+            "ThumbnailImage": null,
+            "Discontinued": false,
+            "Taxable": true,
+            "LoyaltyPoint": true,
+            "CreatorId": "ff7848c9-21f1-4c05-ac9e-1e71d829cc9c",
+            "Created": "2025-09-22T04:44:02.187",
+            "UnitExpense": 0,
+            "SellPriceType": 0,
+            "VariantType": "Standard",
+            "ModifierID": "00000000-0000-0000-0000-000000000000",
+            "Modified": "0001-01-01T00:00:00",
+            "CostCurrencyID": 1,
+            "UnitCost": 90000,
+            "OrderPrice": 100000,
+            "OrderPriceDiscount": 10,
+            "OrderPriceDiscountDetail": null,
+            "PriceCurrencyID": 1,
+            "UnitPrice": 100000,
+            "PriceDiscount": 0,
+            "PaymentTypeID": 0,
+            "PaymentTypeString": "Cash And Point",
+            "SellPriceTypeString": "Require Authorization ",
+            "Weight": 7,
+            "CostCurrencySymbol": null,
+            "PriceCurrencySymbol": null,
+            "UnitPriceMinimum": 5,
+            "MaxOrderPrice": 120000,
+            "VariantImageVisible": true,
+            "UOM": "00000000-0000-0000-0000-000000000000",
+            "MeasurementID": "00000000-0000-0000-0000-000000000000",
+            "UOMQ": "00000000-0000-0000-0000-000000000000",
+            "Name": "Ferrium Ore (Tier-0)",
+            "Model": "Tier-0",
+            "ID": "01996fbc-61ff-7803-b8d3-51044830136c",
+            "Quantity": 1,
+            "Total": 90000,
+            "Discount": 10,
+            "VariantID": "01996fbc-61ff-7803-b8d3-51044830136c",
+            "InventoryTypeID": 1
+          }
+        ],
+        "Payment": {
+          "ID": "00000000-0000-0000-0000-000000000000",
+          "MethodID": 107,
+          "Code": "",
+          "Note": "",
+          "Amount": 179383.20489649998,
+          "Date": "2026-07-07T00:00:00.000",
+          "ImageUrl": ""
+        }
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

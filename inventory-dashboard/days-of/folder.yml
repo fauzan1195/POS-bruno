@@ -1,0 +1,7 @@
+info:
+  name: days-of
+  type: folder
+  seq: 3
+
+request:
+  auth: inherit

@@ -1,0 +1,27 @@
+info:
+  name: days-of/all
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{POS_BASE_URL}}/api/inventory/dashboard/days-of/all"
+  body:
+    type: json
+    data: |-
+      {
+          "OutletIds": [],
+          "SalesDaysRange": 7,
+          "CriticalDaysThreshold": 7,
+          "OverstockDaysThreshold": 60,
+          "CalculateIndirectAllocated": false,
+          "DaysOffset": 0,
+          "ViewMoreCard": 3
+        }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

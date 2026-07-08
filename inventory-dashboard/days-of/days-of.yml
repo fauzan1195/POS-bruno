@@ -1,0 +1,18 @@
+info:
+  name: days-of
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{POS_BASE_URL}}/api/inventory/dashboard/days-of/all"
+  body:
+    type: json
+    data: "{}"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

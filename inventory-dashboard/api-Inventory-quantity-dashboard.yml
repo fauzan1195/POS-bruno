@@ -41,12 +41,14 @@ http:
       value: same-origin
     - name: user-agent
       value: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+    - name: debug
+      value: "1"
   body:
     type: json
     data: |-
       {
         "OutletIds": [],
-        "BrandId": "01986355-1654-7f03-bb45-558790aa9800",
+        "BrandId": null,
         "TagId": null,
         "DaysRange": 7,
         "Discontinued": 0
