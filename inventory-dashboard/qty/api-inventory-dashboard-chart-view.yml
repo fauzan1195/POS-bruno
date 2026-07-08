@@ -4,8 +4,19 @@ info:
   seq: 2
 
 http:
-  method: GET
+  method: POST
   url: "{{POS_BASE_URL}}/api/inventory/dashboard/chart-view"
+  body:
+    type: json
+    data: |-
+      {
+        "From": "2025-12-01",
+        "To": "2026-01-31",
+        "OutletIds": [],
+        "BrandId": null,
+        "TagId": null,
+        "Discontinued": 0
+      }
   auth: inherit
 
 settings:
